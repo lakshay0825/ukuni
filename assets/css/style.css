@@ -88,3 +88,19 @@ header.header.active {
     box-shadow: 0 10px 30px rgba(41, 45, 50, 0.08);
     padding: 0;
 }
+.inner-header.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(41, 45, 50, 0.08);
+    padding: 0;
+    margin-top: 0;
+}
+.step-b-row .step-row:last-child {
+    position: relative;
+    z-index: 1;
+}
