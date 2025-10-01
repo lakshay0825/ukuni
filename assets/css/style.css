@@ -1,0 +1,90 @@
+.slick-dots li button:before {
+    content: none;
+ }
+ 
+ .slick-dots li button {
+     padding: 0;
+     width: 8px;
+     height: 8px;
+     background: #072440;
+     border-radius: 2px;
+     opacity: 0.3;
+     cursor: pointer;
+ }
+ 
+ .slick-dots li {
+     width: auto;
+     height: auto;
+ }
+ 
+ .slick-dots li.slick-active button{
+     opacity: 1;
+ }
+
+/* Moved from inline <style>: shared Slick overrides needing !important */
+#blogSlider .slick-track,
+#testimonialsSlider .slick-track {
+    display: flex !important;
+}
+
+#blogSlider .slick-slide,
+#testimonialsSlider .slick-slide {
+    height: auto !important;
+    display: flex !important;
+    margin: 0 10px;
+}
+
+#blogSlider .slick-dots,
+#testimonialsSlider .slick-dots {
+    bottom: -50px;
+    text-align: center;
+}
+
+#blogSlider .slick-dots li,
+#testimonialsSlider .slick-dots li {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+#blogSlider .slick-dots li button,
+#testimonialsSlider .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #D1D5DB;
+    border: none;
+    font-size: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#blogSlider .slick-dots li.slick-active button,
+#testimonialsSlider .slick-dots li.slick-active button {
+    background: #072440;
+}
+
+#blogSlider .slick-dots li button:hover,
+#testimonialsSlider .slick-dots li button:hover {
+    background: #6B7280;
+}
+
+#testimonialsSlider .slick-list {
+    margin: 0 -10px;
+    padding-right: 60px !important;
+}
+
+/* Utility: container max width used project-wide */
+.container {
+    max-width: 1240px;
+}
+
+/* Header active on scroll */
+header.header {
+    transition: background-color 200ms ease, box-shadow 200ms ease, padding 200ms ease;
+}
+
+header.header.active {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(41, 45, 50, 0.08);
+    padding: 0;
+}
