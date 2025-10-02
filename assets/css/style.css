@@ -1,53 +1,62 @@
 .slick-dots li button:before {
     content: none;
- }
- 
- .slick-dots li button {
-     padding: 0;
-     width: 8px;
-     height: 8px;
-     background: #072440;
-     border-radius: 2px;
-     opacity: 0.3;
-     cursor: pointer;
- }
- 
- .slick-dots li {
-     width: auto;
-     height: auto;
- }
- 
- .slick-dots li.slick-active button{
-     opacity: 1;
- }
+}
+
+.slick-dots li button {
+    padding: 0;
+    width: 8px;
+    height: 8px;
+    background: #072440;
+    border-radius: 2px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.slick-dots li {
+    width: auto;
+    height: auto;
+}
+
+.slick-dots li.slick-active button {
+    opacity: 1;
+}
 
 /* Moved from inline <style>: shared Slick overrides needing !important */
 #blogSlider .slick-track,
-#testimonialsSlider .slick-track {
+#testimonialsSlider .slick-track,
+#storiesSlider .slick-track {
     display: flex !important;
 }
 
 #blogSlider .slick-slide,
-#testimonialsSlider .slick-slide {
+#testimonialsSlider .slick-slide,
+#storiesSlider .slick-slide {
     height: auto !important;
     display: flex !important;
     margin: 0 10px;
 }
 
+#storiesSlider .slick-slide {
+    margin: 10px 20px;
+}
+
 #blogSlider .slick-dots,
-#testimonialsSlider .slick-dots {
+#testimonialsSlider .slick-dots,
+#storiesSlider .slick-dots {
     bottom: -50px;
     text-align: center;
 }
 
 #blogSlider .slick-dots li,
-#testimonialsSlider .slick-dots li {
+#testimonialsSlider .slick-dots li,
+#storiesSlider .slick-dots li {
     display: inline-block;
     margin: 0 8px;
 }
 
 #blogSlider .slick-dots li button,
-#testimonialsSlider .slick-dots li button {
+#testimonialsSlider .slick-dots li button,
+#storiesSlider .slick-dots li button {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -59,12 +68,14 @@
 }
 
 #blogSlider .slick-dots li.slick-active button,
-#testimonialsSlider .slick-dots li.slick-active button {
+#testimonialsSlider .slick-dots li.slick-active button,
+#storiesSlider .slick-dots li.slick-active button {
     background: #072440;
 }
 
 #blogSlider .slick-dots li button:hover,
-#testimonialsSlider .slick-dots li button:hover {
+#testimonialsSlider .slick-dots li button:hover,
+#storiesSlider .slick-dots li button:hover {
     background: #6B7280;
 }
 
@@ -88,19 +99,33 @@ header.header.active {
     box-shadow: 0 10px 30px rgba(41, 45, 50, 0.08);
     padding: 0;
 }
+
 .inner-header.active {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    width: 100%;
     background: #ffffff;
     box-shadow: 0 10px 30px rgba(41, 45, 50, 0.08);
     padding: 0;
-    margin-top: 0;
 }
+
 .step-b-row .step-row:last-child {
     position: relative;
     z-index: 1;
+}
+
+section {
+    position: relative;
+    z-index: 9;
+}
+
+#mobileOverlay {
+    z-index: 10;
+}
+
+.header.header {
+    position: relative;
+    z-index: 11;
 }
