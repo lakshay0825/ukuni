@@ -85,8 +85,10 @@
 }
 
 /* Utility: container max width used project-wide */
-.container {
-    max-width: 1240px;
+@media (min-width: 1536px) {
+    body .container {
+        max-width: 1240px;
+    }
 }
 
 /* Header active on scroll */
