@@ -167,7 +167,7 @@
             <!-- Heading -->
             <h1
                 class="font-poppins font-semibold font-poppins font-semibold text-[36px] leading-[40px] sm:text-[40px] sm:leading-[48px] md:text-[48px] md:leading-[56px] lg:text-[54px] lg:leading-[64px] tracking-[0%] capitalize text-[#072440]">
-                Frequently Asked questions
+                Our services
             </h1>
 
             <!-- Breadcrumb -->
@@ -175,335 +175,155 @@
                 <a href="#"
                     class="font-poppins font-normal text-[#707070] hover:text-[#072440] transition-colors">Home</a>
                 <span class="text-[#707070]">›</span>
-                <span class="font-poppins font-normal text-[#292D32]">FAQ</span>
+                <span class="font-poppins font-normal text-[#292D32]">Our services</span>
             </nav>
 
         </div>
     </section>
 
-    <section class="universities-sec py-20 md:py-30 px-6 md:px-12 lg:px-20">
-        <div class="container mx-auto">
-            <div class="flex flex-col">
-
-                <div class="w-full px-0 md:px-4">
-                    <div class="universities-us-text text-center max-w-[100%] w-[1030px] m-auto mb-15">
-                        <h2
-                            class="font-poppins font-bold text-[32px] leading-[40px] sm:text-[32px] sm:leading-[40px] md:text-[36px] md:leading-[40px] lg:text-[40px] lg:leading-[48px] text-[#072440] mb-4">
-                            Comprehensive Support</h2>
-                        <p
-                            class="font-poppins font-normal text-[20px] md:text-[20px] lg:text-[24px] leading-[160%] tracking-[0%] mb-4">
-                            Whether you’re preparing for your studies abroad or exploring collaboration opportunities,
-                            our FAQs are here to guide you every step of the way.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="w-full px-0 md:px-4">
-                    <div class="relative" x-data="{ tab: 'general' }">
-                        <!-- Tabs -->
-                        <div
-                            class="flex border border-[#DBE0EA] rounded-lg overflow-hidden mb-6 w-full divide-x divide-[#DBE0EA]">
-                            <div class="flex w-full p-1">
-                                <button class="flex-1 py-3 px-6 text-center font-semibold text-[14px]"
-                                    :class="tab === 'general' ? 'bg-[#DBE0EA] rounded-lg text-[#072440]' : 'bg-white text-gray-600'"
-                                    @click="tab = 'general'">
-                                    General Service
-                                </button>
-                            </div>
-                            <div class="flex w-full p-1">
-                                <button class="flex-1 py-3 px-6 text-center font-semibold text-[14px]"
-                                    :class="tab === 'student' ? 'bg-[#DBE0EA] rounded-lg text-[#072440]' : 'bg-white text-gray-600'"
-                                    @click="tab = 'student'">
-                                    Student Services
-                                </button>
-                            </div>
-                            <div class="flex w-full p-1">
-                                <button class="flex-1 py-3 px-2 md:px-6 text-center font-semibold text-[14px]"
-                                    :class="tab === 'professional' ? 'bg-[#DBE0EA] rounded-lg text-[#072440]' : 'bg-white text-gray-600'"
-                                    @click="tab = 'professional'">
-                                    Professional Learning
-                                </button>
-                            </div>
-                        </div>
-
-
-                        <div x-show="tab === 'general'" class="space-y-6">
-                            <div class="w-full p-6 bg-white rounded-3xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)]">
-                                <!-- FAQ Item -->
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            What is UKuni and what makes it unique?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        UKuni is an education consultancy specializing in international student placements, professional learning, and institutional partnerships, with a focus on quality and student success.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            Which universities are part of UKuni’s network?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        Our advisors review your drafts, provide feedback, and help you refine your
-                                        personal statement to stand out to universities.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            What kind of support does UKuni provide after admission?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        Yes, we offer mock interviews and personalized coaching to build your confidence
-                                        and improve performance.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            How can I contact UKuni for assistance?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        You can reach us via email, phone, or visit our regional offices. Response times are usually within 24 hours.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            How does UKuni measure success?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        We guide you through the entire visa application process, including required
-                                        documents and preparation.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div x-show="tab === 'student'" class="space-y-6">
-                            <div class="w-full p-6 bg-white rounded-3xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)]">
-                                <!-- FAQ Item -->
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            How do I start my application process?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        Begin with a consultation with UKuni advisors. We guide you through university
-                                        selection, document preparation, and application submission to maximize your
-                                        acceptance chances.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            What support is provided for my personal statement?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        Our advisors review your drafts, provide feedback, and help you refine your
-                                        personal statement to stand out to universities.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            Can I get help with interview preparation?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        Yes, we offer mock interviews and personalized coaching to build your confidence
-                                        and improve performance.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            Are there scholarships available for international students?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        We provide guidance on finding and applying for scholarships that match your
-                                        profile and goals.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            What visa support does UKuni offer?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        We guide you through the entire visa application process, including required
-                                        documents and preparation.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            How does UKuni help with pre-departure preparation?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        We offer pre-departure briefings covering travel, accommodation, and cultural
-                                        adjustments.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            Are language skills and academic preparation included?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        Yes, we provide training and resources to strengthen your English skills and
-                                        academic readiness.
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            Can UKuni support me throughout my entire study journey?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        Absolutely! From application to graduation, we are here to support you at every
-                                        step of your study journey.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div x-show="tab === 'professional'" class="space-y-6">
-                            <div class="w-full p-6 bg-white rounded-3xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)]">
-                                <!-- FAQ Item -->
-                                <!-- FAQ Item -->
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            What is UKuni and what makes it unique?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        UKuni is an education consultancy specializing in international student placements, professional learning, and institutional partnerships, with a focus on quality and student success.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            Which universities are part of UKuni’s network?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        Our advisors review your drafts, provide feedback, and help you refine your
-                                        personal statement to stand out to universities.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            What kind of support does UKuni provide after admission?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        Yes, we offer mock interviews and personalized coaching to build your confidence
-                                        and improve performance.
-                                    </div>
-                                </div>
-
-                                <div class="border-b border-gray-200">
-                                    <button class="w-full flex justify-between items-center py-4 text-left faq-toggle">
-                                        <span class="font-semibold text-[24px] leading-[34px] text-[#072440]">
-                                            How can I contact UKuni for assistance?
-                                        </span>
-                                        <span
-                                            class="icon w-8 h-8 border border-[#072440] rounded flex items-center justify-center text-[#072440] text-xl font-bold">+</span>
-                                    </button>
-                                    <div
-                                        class="faq-content hidden pb-4 text-[16px] leading-[24px] text-[#292D32] font-normal">
-                                        You can reach us via email, phone, or visit our regional offices. Response times are usually within 24 hours.
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-
+    <section class="our-services py-20 md:py-30 bg-white">
+        <div class="step-b-row container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Heading -->
+            <div class="text-center md:text-left mb-12">
+                <h2
+                    class="font-poppins font-bold text-[36px] leading-[40px] sm:text-[36px] sm:leading-[48px] md:text-[48px] md:leading-[56px] lg:text-[54px] lg:leading-[64px] text-[#072440]">
+                    Our Services</h2>
+                <p
+                    class="font-poppins font-normal text-[20px] md:text-[20px] lg:text-[24px] leading-[160%] text-[#292D32] mt-3">
+                    Today's students have many opportunities to
+                    choose the best university education around the world. We would like to present some of the best
+                    options
+                    available to you.</p>
             </div>
 
+            <!-- Content -->
+            <div class="steps-list">
+                <div
+                    class="step-row bg-white grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8 items-stretch rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] rounded-3xl mb-10 md:mb-30">
+                    <!-- Text Card -->
+                    <div class="relative px-8 py-3 md:py-8 flex flex-col justify-between order-2 md:order-1">
+                        <div class="text-[130px] font-extrabold text-[#E8F5FF] leading-none select-none number-desktop">
+                            01</div>
+                        <div class="relative mt-2 md:mt-16">
+                            <h3 class="text-2xl md:text-[36px] font-semibold text-[#072440]">Higher Education Enrolments
+                            </h3>
+                            <p class="mt-3 text-[#292D32] text-[16px] leading-[28px] max-w-[520px]">We guide ambitious
+                                students to top
+                                global universities with tailored support and proven success.</p>
+                            <a href="#"
+                                class="bg-[#072440] text-white px-5 py-3 rounded-lg font-semibold transition-colors duration-150 hover:bg-[#103a75] inline-flex mt-6">Learn
+                                More</a>
+                        </div>
+                    </div>
+
+                    <!-- Image Card -->
+                    <div class="overflow-hidden min-h-[220px] md:min-h-[320px] order-1 md:order-2">
+                        <img src="assets/img/service1.jpg" alt="Student" class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+
+                <div
+                    class="step-row bg-white grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8 items-stretch rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] rounded-3xl mb-10 md:mb-30">
+                    <!-- Text Card -->
+                    <div class="relative px-8 py-3 md:py-8 flex flex-col justify-between order-2 md:order-1">
+                        <div class="text-[130px] font-extrabold text-[#E8F5FF] leading-none select-none number-desktop">
+                            02</div>
+                        <div class="relative mt-2 md:mt-16">
+                            <h3 class="text-2xl md:text-[36px] font-semibold text-[#072440]">Professional Learning &
+                                Development</h3>
+                            <p class="mt-3 text-[#292D32] text-[16px] leading-[28px] max-w-[520px]">We deliver tailored
+                                leadership and
+                                development programs that drive individual growth and organisational excellence.</p>
+                            <a href="#"
+                                class="bg-[#072440] text-white px-5 py-3 rounded-lg font-semibold transition-colors duration-150 hover:bg-[#103a75] inline-flex mt-6">Learn
+                                More</a>
+                        </div>
+                    </div>
+
+                    <!-- Image Card -->
+                    <div class="overflow-hidden min-h-[220px] md:min-h-[320px] order-1 md:order-2">
+                        <img src="assets/img/service2.jpg" alt="Student" class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+
+                <div
+                    class="step-row bg-white grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8 items-stretch rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] rounded-3xl mb-10 md:mb-30">
+                    <!-- Text Card -->
+                    <div class="relative px-8 py-3 md:py-8 flex flex-col justify-between order-2 md:order-1">
+                        <div class="text-[130px] font-extrabold text-[#E8F5FF] leading-none select-none number-desktop">
+                            03</div>
+                        <div class="relative mt-2 md:mt-16">
+                            <h3 class="text-2xl md:text-[36px] font-semibold text-[#072440]">English Language Courses
+                            </h3>
+                            <p class="mt-3 text-[#292D32] text-[16px] leading-[28px] max-w-[520px]">Accelerated English
+                                learning with
+                                cultural immersion, expert tutors, and direct progression to degree programmes.</p>
+                            <a href="#"
+                                class="bg-[#072440] text-white px-5 py-3 rounded-lg font-semibold transition-colors duration-150 hover:bg-[#103a75] inline-flex mt-6">Learn
+                                More</a>
+                        </div>
+                    </div>
+
+                    <!-- Image Card -->
+                    <div class="overflow-hidden min-h-[320px] order-1 md:order-2">
+                        <img src="assets/img/service3.jpg" alt="Student" class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+
+
+                <div
+                    class="step-row bg-white grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8 items-stretch rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] rounded-3xl mb-10 md:mb-30">
+                    <!-- Text Card -->
+                    <div class="relative px-8 py-3 md:py-8 flex flex-col justify-between order-2 md:order-1">
+                        <div class="text-[130px] font-extrabold text-[#E8F5FF] leading-none select-none number-desktop">
+                            04</div>
+                        <div class="relative mt-2 md:mt-16">
+                            <h3 class="text-2xl md:text-[36px] font-semibold text-[#072440]">Student Summer Programmes
+                                and Camps</h3>
+                            <p class="mt-3 text-[#292D32] text-[16px] leading-[28px] max-w-[520px]">From junior camps to
+                                pre-university
+                                orientation, our summer programmes foster language fluency, cultural adaptability, and
+                                academic
+                                excellence.</p>
+                            <a href="#"
+                                class="bg-[#072440] text-white px-5 py-3 rounded-lg font-semibold transition-colors duration-150 hover:bg-[#103a75] inline-flex mt-6">Learn
+                                More</a>
+                        </div>
+                    </div>
+
+                    <!-- Image Card -->
+                    <div class="overflow-hidden min-h-[320px] order-1 md:order-2">
+                        <img src="assets/img/service4.jpg" alt="Student" class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+
+                <div
+                    class="step-row bg-white grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8 items-stretch rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] rounded-3xl ">
+                    <!-- Text Card -->
+                    <div class="relative px-8 py-3 md:py-8 flex flex-col justify-between order-2 md:order-1">
+                        <div class="text-[130px] font-extrabold text-[#E8F5FF] leading-none select-none number-desktop">
+                            05</div>
+                        <div class="relative mt-2 md:mt-16">
+                            <h3 class="text-2xl md:text-[36px] font-semibold text-[#072440]">Higher Education and
+                                Corporate Advisory
+                                Services</h3>
+                            <p class="mt-3 text-[#292D32] text-[16px] leading-[28px] max-w-[520px]">Comprehensive
+                                advisory services
+                                helping educational institutions and corporates align with Vision 2030, optimise
+                                operations, and expand
+                                their global impact.</p>
+                            <a href="#"
+                                class="bg-[#072440] text-white px-5 py-3 rounded-lg font-semibold transition-colors duration-150 hover:bg-[#103a75] inline-flex mt-6">Learn
+                                More</a>
+                        </div>
+                    </div>
+
+                    <!-- Image Card -->
+                    <div class="overflow-hidden min-h-[320px] order-1 md:order-2">
+                        <img src="assets/img/service5.jpg" alt="Student" class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
