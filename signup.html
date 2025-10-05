@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- jQuery + Slick Carousel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+      body { font-family: 'Poppins', sans-serif; }
+    }
+  </style>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <section class="login-sec px-4 py-2">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-stretch h-full min-h-screen">
+
+                <!-- Left : Login Form -->
+                <div class="w-full lg:w-1/2 p-6 sm:p-8 md:p-8">
+                    <!-- Logo -->
+                    <div class="mb-6">
+                        <img src="assets/img/logo.svg" alt="UKuni Logo" class="h-10">
+                    </div>
+
+                    <!-- Title -->
+                    <h2
+                        class="text-[28px] sm:text-[32px] leading-[36px] sm:leading-[40px] font-semibold text-[#072440]">
+                        Sign up
+                    </h2>
+                    <p
+                        class="mt-2 text-[14px] sm:text-[16px] leading-[22px] sm:leading-[24px] font-normal text-[#292D32]">
+                        Create your account to get started on your journey.
+                    </p>
+
+                    <!-- Form -->
+                    <form action="#" method="POST" class="mt-8 space-y-5">
+                        <!-- Name -->
+                        <div>
+                            <label class="block text-[14px] sm:text-[16px] leading-[24px] text-[#292D32] font-normal">
+                                Name <span class="text-[#001C54]">*</span>
+                            </label>
+
+                            <input type="text" placeholder="Enter your name"
+                                class="mt-2 w-full h-[50px] sm:h-[56px] rounded-lg border border-[#DBE0EA] px-4 text-[14px] sm:text-[16px] focus:border-[#072440] focus:ring-[#072440]" />
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label
+                                class="block text-[14px] sm:text-[16px] leading-[24px] text-[#292D32] font-normal">Email
+                                <span>*</span></label>
+                            <input type="text" placeholder="Enter your email"
+                                class="mt-2 w-full h-[50px] sm:h-[56px] rounded-lg border border-[#DBE0EA] px-4 text-[14px] sm:text-[16px] focus:border-[#072440] focus:ring-[#072440]" />
+                        </div>
+
+                        <!-- Password -->
+                        <div>
+                            <label
+                                class="block text-[14px] sm:text-[16px] leading-[24px] text-[#292D32] font-normal">Password</label>
+                            <input type="password" placeholder="Create a password"
+                                class="mt-2 w-full h-[50px] sm:h-[56px] rounded-lg border border-[#DBE0EA] px-4 text-[14px] sm:text-[16px] focus:border-[#072440] focus:ring-[#072440]" />
+                            <span class="font-poppins font-normal text-[14px] leading-[16px] text-[#707070]">
+                                Must be at least 8 characters.
+                            </span>
+                        </div>
+
+                        <!-- Login Button -->
+                        <button type="submit"
+                            class="w-full h-[50px] sm:h-[56px] bg-[#072440] text-white rounded-lg text-[16px] sm:text-[18px] leading-[24px] sm:leading-[26px] font-semibold hover:bg-[#001C54] transition cursor-pointer">
+                            Sign up
+                        </button>
+
+                        <!-- Divider -->
+                        <div class="flex items-center my-4">
+                            <hr class="flex-grow border-gray-300">
+                            <span class="px-3 text-sm text-gray-500">OR</span>
+                            <hr class="flex-grow border-gray-300">
+                        </div>
+
+                        <!-- Social Buttons -->
+                        <div class="space-y-3">
+                            <button
+                                class="w-full h-[50px] sm:h-[56px] flex items-center justify-center border border-[#DBE0EA] rounded-lg text-[16px] sm:text-[18px] leading-[24px] sm:leading-[26px] font-semibold text-[#072440] hover:bg-gray-50  cursor-pointer">
+                                <img src="assets/img/google.svg" class="h-5 w-5 mr-2" alt=""> Sign up with Google
+                            </button>
+                            <button
+                                class="w-full h-[50px] sm:h-[56px] flex items-center justify-center border border-[#DBE0EA] rounded-lg text-[16px] sm:text-[18px] leading-[24px] sm:leading-[26px] font-semibold text-[#072440] hover:bg-gray-50  cursor-pointer">
+                                <img src="assets/img/facebook.svg" class="h-5 w-5 mr-2" alt="">
+                                Sign up with Facebook
+                            </button>
+                            <button
+                                class="w-full h-[50px] sm:h-[56px] flex items-center justify-center border border-[#DBE0EA] rounded-lg text-[16px] sm:text-[18px] leading-[24px] sm:leading-[26px] font-semibold text-[#072440] hover:bg-gray-50 cursor-pointer">
+                                <img src="assets/img/apple.svg" class="h-5 w-5 mr-2" alt=""> Sign up with Apple
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Signup -->
+                    <p class="mt-6 text-center text-sm text-gray-600">
+                        Already have an account?
+                        <a href="#" class="font-medium text-[#072440] hover:underline">Log in</a>
+                    </p>
+                </div>
+
+                <div class="hidden lg:flex w-full lg:w-1/2 bg-[#E8F5FF] 
+         p-6 md:p-10 relative rounded-3xl shadow-[0_4px_30px_rgba(41,45,50,0.06)] items-center overflow-hidden">
+
+                    <!-- Background Map -->
+                    <div class="absolute left-[0] w-full pointer-events-none">
+                        <img src="assets/img/login-map.png" alt="Map Background" class="object-cover">
+                    </div>
+
+                    <!-- Slider Wrapper (centered vertically) -->
+                    <div class="w-full max-w-[520px] mx-auto flex flex-col justify-center h-full relative">
+
+                        <!-- Slick Slider -->
+                        <div id="contactSlider">
+
+                            <!-- Testimonial 1 -->
+                            <div>
+                                <div class="bg-white rounded-2xl p-8 shadow-[0_4px_30px_rgba(41,45,50,0.08)]">
+                                    <!-- Quote Icon -->
+                                    <img src="assets/img/quote.svg" alt="Quote" class="w-8 mb-4">
+
+                                    <!-- Text -->
+                                    <p class="text-[#292D32] text-[16px] leading-[24px] mb-6">
+                                        Transitioning from finance to entrepreneurship felt daunting until I started
+                                        working with UKuni.
+                                        Their expert coaching on my MBA application and interviews gave me the
+                                        confidence to stand out in a highly competitive pool.
+                                    </p>
+                                    <p class="text-[#292D32] text-[16px] leading-[24px] mb-6">
+                                        The guidance didn’t stop at admissions—they advised me on networking, career
+                                        pathways, and even aligning my studies with industry trends.
+                                    </p>
+
+                                    <!-- Author -->
+                                    <div class="flex items-center">
+                                        <img src="assets/img/avatar1.png" alt="Author"
+                                            class="w-12 h-12 rounded-lg mr-4">
+                                        <div>
+                                            <h4 class="text-[#292D32] text-[16px] font-semibold">Khalid Al-Harbi</h4>
+                                            <p class="text-[#666666] text-[14px]">MBA Student & Fintech Entrepreneur</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Testimonial 1 -->
+                            <div>
+                                <div class="bg-white rounded-2xl p-8 shadow-[0_4px_15px_rgba(41,45,50,0.08)]">
+                                    <!-- Quote Icon -->
+                                    <img src="assets/img/quote.svg" alt="Quote" class="w-8 mb-4">
+
+                                    <!-- Text -->
+                                    <p class="text-[#292D32] text-[16px] leading-[24px] mb-6">
+                                        Transitioning from finance to entrepreneurship felt daunting until I started
+                                        working with UKuni.
+                                        Their expert coaching on my MBA application and interviews gave me the
+                                        confidence to stand out in a highly competitive pool.
+                                    </p>
+                                    <p class="text-[#292D32] text-[16px] leading-[24px] mb-6">
+                                        The guidance didn’t stop at admissions—they advised me on networking, career
+                                        pathways, and even aligning my studies with industry trends.
+                                    </p>
+
+                                    <!-- Author -->
+                                    <div class="flex items-center">
+                                        <img src="assets/img/avatar1.png" alt="Author"
+                                            class="w-12 h-12 rounded-lg mr-4">
+                                        <div>
+                                            <h4 class="text-[#292D32] text-[16px] font-semibold">Khalid Al-Harbi</h4>
+                                            <p class="text-[#666666] text-[14px]">MBA Student & Fintech Entrepreneur</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add more slides here -->
+
+                        </div>
+
+                        <!-- Dots -->
+                        <div id="contactDots" class="mt-6 flex justify-center"></div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>
+
+<!-- Alpine.js CDN -->
+<script src="https://unpkg.com/alpinejs" defer></script>
+
+<!-- GSAP Core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<!-- ScrollToPlugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+<!-- ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+    (function () {
+        function updateHeaderOffset() {
+            var header = document.querySelector('header.header');
+            var section = document.querySelector('section.hero');
+            if (!header || !section) return;
+            var height = header.offsetHeight || 0;
+            section.style.paddingTop = height + 'px';
+        }
+
+        // Update on load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updateHeaderOffset);
+        } else {
+            updateHeaderOffset();
+        }
+
+        // Update on resize (debounced)
+        var resizeTimeout;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(updateHeaderOffset, 100);
+        });
+
+        // Update when header size changes
+        var headerEl = document.querySelector('header.header');
+        if (window.ResizeObserver && headerEl) {
+            var ro = new ResizeObserver(updateHeaderOffset);
+            ro.observe(headerEl);
+        }
+
+        // Update after fonts load (affects header height)
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(updateHeaderOffset);
+        }
+
+        // Mobile sidebar toggle logic
+        var btn = document.getElementById('mobileMenuButton');
+        var btnClose = document.getElementById('mobileMenuClose');
+        var sidebar = document.getElementById('siteNav');
+        var overlay = document.getElementById('mobileOverlay');
+
+        function openMenu() {
+            if (!sidebar || !overlay || !btn) return;
+            sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('pointer-events-none');
+            requestAnimationFrame(function () {
+                overlay.classList.add('opacity-100');
+                overlay.classList.remove('opacity-0');
+            });
+            document.body.classList.add('overflow-hidden');
+            sidebar.setAttribute('aria-hidden', 'false');
+            btn.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMenu() {
+            if (!sidebar || !overlay || !btn) return;
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('opacity-0');
+            overlay.classList.remove('opacity-100');
+            setTimeout(function () {
+                overlay.classList.add('pointer-events-none');
+            }, 200);
+            document.body.classList.remove('overflow-hidden');
+            sidebar.setAttribute('aria-hidden', 'true');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+
+        function toggleMenu() {
+            if (!sidebar) return;
+            if (sidebar.classList.contains('-translate-x-full')) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        }
+
+        if (btn) btn.addEventListener('click', toggleMenu);
+        if (btnClose) btnClose.addEventListener('click', closeMenu);
+        if (overlay) overlay.addEventListener('click', closeMenu);
+
+        // Close on ESC
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeMenu();
+        });
+
+        // Reset on resize up to desktop
+        var resizeTO;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTO);
+            resizeTO = setTimeout(function () {
+                if (window.innerWidth >= 768) {
+                    closeMenu();
+                }
+                updateHeaderOffset();
+            }, 150);
+        });
+
+        // Header active on scroll
+        var lastKnownScrollY = 0;
+        var ticking = false;
+        var headerActiveThreshold = 10; // px
+        var headerNode = document.querySelector('header.header');
+
+        function onScroll() {
+            lastKnownScrollY = window.scrollY || window.pageYOffset || 0;
+            if (!ticking) {
+                window.requestAnimationFrame(updateHeaderState);
+                ticking = true;
+            }
+        }
+
+        function updateHeaderState() {
+            if (!headerNode) return;
+            if (lastKnownScrollY > headerActiveThreshold) {
+                headerNode.classList.add('active');
+            } else {
+                headerNode.classList.remove('active');
+            }
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        // Initialize state in case page loads scrolled
+        updateHeaderState();
+    })();
+</script>
+<script>
+    (function () {
+        var $track = $('#destinationsTrack');
+        if (!$track.length || !$.fn.slick) return;
+
+        $track.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            appendDots: $('#destDots'),
+            arrows: false,
+            prevArrow: $('#destPrev'),
+            nextArrow: $('#destNext'),
+            responsive: [
+                { breakpoint: 1280, settings: { slidesToShow: 2 } },
+                { breakpoint: 1024, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1, arrows: false, centerMode: false } },
+                { breakpoint: 640, settings: { slidesToShow: 1, arrows: false, dots: true } }
+            ]
+        });
+    })();
+</script>
+<script>
+    (function () {
+        var $testimonialsSlider = $('#testimonialsSlider');
+        if (!$testimonialsSlider.length || !$.fn.slick) return;
+
+        $testimonialsSlider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            appendDots: $('#testimonialsDots'),
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            responsive: [
+                { breakpoint: 1280, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true, arrows: false } },
+                { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true, arrows: false } }
+            ]
+        });
+    })();
+</script>
+<script>
+    (function () {
+        var $blogSlider = $('#blogSlider');
+        if (!$blogSlider.length || !$.fn.slick) return;
+
+        $blogSlider.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            appendDots: $('#blogDots'),
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            responsive: [
+                { breakpoint: 1280, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } },
+                { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } }
+            ]
+        });
+    })();
+
+    (function () {
+        var $storiesSlider = $('#storiesSlider');
+        if (!$storiesSlider.length || !$.fn.slick) return;
+
+        $storiesSlider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            appendDots: $('#storiesDots'),
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            responsive: [
+                { breakpoint: 1280, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+                { breakpoint: 1024, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+                { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } },
+                { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } }
+            ]
+        });
+    })();
+
+    (function () {
+        var $storiesSlider = $('#contactSlider');
+        if (!$storiesSlider.length || !$.fn.slick) return;
+
+        $storiesSlider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            appendDots: $('#contactDots'),
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            responsive: [
+                { breakpoint: 1280, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+                { breakpoint: 1024, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+                { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } },
+                { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } }
+            ]
+        });
+    })();
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var initScrollTriggers = function initScrollTriggers() {
+            var stepsWrappers = document.querySelectorAll(".step-b-row");
+
+            if (window.innerWidth < 1200) return;
+
+            stepsWrappers.forEach(function (wrapper) {
+                var header = document.querySelector(".header");
+                var stepsContainer = wrapper.querySelector(".steps-list");
+                var stepRows = wrapper.querySelectorAll(".step-row");
+
+                if (!stepsContainer || stepRows.length < 4 || !header) return;
+
+                var getHeaderHeight = function getHeaderHeight() {
+                    return header.offsetHeight;
+                };
+
+                var updateTriggers = function updateTriggers() {
+                    var headerHeight = getHeaderHeight();
+
+                    stepRows.forEach(function (step, index) {
+                        var numberDesktop = step.querySelector(".number-desktop");
+                        if (numberDesktop) {
+                            numberDesktop.textContent = (index + 1).toString().padStart(2, "0");
+                        }
+
+                        if (index === stepRows.length - 1) return;
+
+                        var endValue = void 0;
+                        if (index === stepRows.length - 2) {
+                            var stepMarginBottom =
+                                parseFloat(getComputedStyle(step).marginBottom) || 0;
+                            endValue = "bottom+=" + stepMarginBottom + " top+=" + headerHeight;
+                        } else {
+                            var lastStep = stepRows[stepRows.length - 1];
+                            var prevStep = stepRows[stepRows.length - 2];
+                            var prevStepMarginBottom =
+                                parseFloat(getComputedStyle(prevStep).marginBottom) || 0;
+                            var stepsWrapperPaddingBottom =
+                                parseFloat(getComputedStyle(wrapper).paddingBottom) || 0;
+                            endValue =
+                                "top+=" +
+                                (lastStep.offsetTop -
+                                    headerHeight -
+                                    lastStep.offsetHeight -
+                                    prevStepMarginBottom -
+                                    stepsWrapperPaddingBottom) +
+                                " top+=" +
+                                headerHeight;
+                        }
+
+                        ScrollTrigger.create({
+                            trigger: step,
+                            start: "top top+=" + headerHeight,
+                            end: endValue,
+                            pin: true,
+                            pinSpacing: false,
+                            // markers: true,
+                            onEnter: function onEnter() {
+                                if (index > 0) {
+                                    gsap.to(stepRows[index - 1], { opacity: 0, duration: 0.3 });
+                                }
+                            },
+                            onLeaveBack: function onLeaveBack() {
+                                if (index > 0) {
+                                    gsap.to(stepRows[index - 1], { opacity: 1, duration: 0.3 });
+                                }
+                            },
+                        });
+                    });
+
+                    ScrollTrigger.refresh();
+                };
+
+                updateTriggers();
+            });
+        };
+
+        var isActive = false;
+
+        var checkAndInit = function checkAndInit() {
+            if (window.innerWidth >= 1200 && !isActive) {
+                isActive = true;
+                initScrollTriggers();
+            } else if (window.innerWidth < 1200 && isActive) {
+                isActive = false;
+                ScrollTrigger.getAll().forEach(function (trigger) {
+                    return trigger.kill();
+                });
+            }
+        };
+
+        checkAndInit();
+
+        window.addEventListener("resize", function () {
+            checkAndInit();
+        });
+    });
+
+    // Accordion toggle
+    document.querySelectorAll(".faq-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector(".icon");
+
+            // Close all open FAQs
+            document.querySelectorAll(".faq-content").forEach((item) => {
+                if (item !== content) {
+                    item.classList.add("hidden");
+                    item.previousElementSibling.querySelector(".icon").textContent = "+";
+                }
+            });
+
+            // Toggle current
+            content.classList.toggle("hidden");
+            icon.textContent = content.classList.contains("hidden") ? "+" : "−";
+        });
+    });
+</script>

@@ -36,6 +36,11 @@
     margin: 0 10px;
 }
 
+#contactSlider .slick-slide {
+    height: auto !important;
+    display: flex !important;
+    margin: 0 20px;
+}
 #storiesSlider .slick-slide {
     margin: 10px 20px;
 }
