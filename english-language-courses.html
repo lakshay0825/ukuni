@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- jQuery + Slick Carousel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+      body { font-family: 'Poppins', sans-serif; }
+    }
+  </style>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <header
+        class="header inner-header inset-x-0 top-0 z-50 shadow-[0_4px_15px_0_#292D3212] w-[95%] mt-3 md:w-[98%] m-auto rounded-3xl">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="assets/img/logo.svg" alt="Logo" class="h-10" />
+            </a>
+
+            <!-- Mobile menu button -->
+            <button id="mobileMenuButton"
+                class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none "
+                aria-controls="siteNav" aria-expanded="false" aria-label="Open menu">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- Unified Nav: mobile drawer + desktop inline -->
+            <nav id="siteNav"
+                class="fixed top-0 left-0 h-full w-[84%] sm:w-80 max-w-[90%] overflow-y-auto bg-white shadow-2xl rounded-r-2xl -translate-x-full transition-transform duration-300 ease-out md:static md:h-auto md:w-auto md:max-w-none md:bg-transparent md:shadow-none md:rounded-none md:translate-x-0 md:flex md:items-center md:overflow-visible"
+                aria-hidden="true">
+                <!-- Mobile-only header inside drawer -->
+                <div class="md:hidden py-4 px-4 flex items-center justify-between border-b">
+                    <span class="font-semibold text-gray-900">Menu</span>
+                    <button id="mobileMenuClose"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none "
+                        aria-label="Close menu">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Links group -->
+                <div
+                    class="px-4 py-4 space-y-4 md:p-0 md:space-y-0 md:flex md:flex-1 md:justify-center md:items-center md:space-x-8">
+                    <a href="#"
+                        class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">About</a>
+
+                    <!-- Dropdown: Our Services -->
+                    <div class="relative group">
+                        <button
+                            class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87] flex items-center">
+                            Our Services
+                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full hidden md:group-hover:block md:group-focus:block bg-white shadow-lg rounded-lg w-56 z-50 py-2 pointer-events-auto">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 1</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 2</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 3</a>
+                        </div>
+                        <div class="md:hidden mt-2 space-y-1 pl-2">
+                            <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Service 1</a>
+                            <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Service 2</a>
+                            <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Service 3</a>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">Our
+                        Partners</a>
+
+                    <!-- Dropdown: Resources -->
+                    <div class="relative group">
+                        <button
+                            class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87] flex items-center">
+                            Resources
+                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full hidden md:group-hover:block md:group-focus:block bg-white shadow-lg rounded-lg w-56 z-50 py-2 pointer-events-auto">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Resource 1</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Resource 2</a>
+                        </div>
+                        <div class="md:hidden mt-2 space-y-1 pl-2">
+                            <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Resource 1</a>
+                            <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Resource 2</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider on mobile -->
+                <div class="md:hidden border-t my-2 px-4">
+
+                    <!-- Right group: language + CTA -->
+                    <div class="pb-6 md:p-0 md:pb-0 md:ml-auto md:flex md:items-center md:space-x-4">
+                        <div class="py-3 md:py-0">
+                            <a href="#"
+                                class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">En</a>
+                            <span class="mx-1">|</span>
+                            <a href="#"
+                                class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">Ar</a>
+                        </div>
+                        <a href="#"
+                            class="font-poppins font-semibold text-[18px] leading-[26px] text-center bg-[#FFFFFF99] border border-[#FFFFFF1A] px-5 py-2 rounded-lg shadow-sm hover:bg-gray-100">Contact
+                            Us</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Right Section -->
+            <div class="items-center space-x-4 hidden md:flex">
+                <!-- Language Switch -->
+                <div class="hidden md:block">
+                    <a href="#"
+                        class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">En</a>
+                    <span class="mx-1">|</span>
+                    <a href="#"
+                        class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">Ar</a>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#"
+                    class="font-poppins font-semibold text-[18px] leading-[26px] text-center bg-[#FFFFFF99] border border-[#FFFFFF1A] px-5 py-2 rounded-lg shadow-sm hover:bg-gray-100">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Overlay -->
+    <div id="mobileOverlay"
+        class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-200"></div>
+
+    <section
+        class="inner-banner bg-[url('assets/img/inner-banner.png')] bg-cover bg-center w-[95%] md:w-[98%] m-auto mt-4 rounded-3xl">
+        <div class="container mx-auto px-5 md:px-10 h-[350px] flex flex-col justify-center items-center text-center">
+
+            <!-- Heading -->
+            <h1
+                class="font-poppins font-semibold font-poppins font-semibold text-[36px] leading-[40px] sm:text-[40px] sm:leading-[48px] md:text-[48px] md:leading-[56px] lg:text-[54px] lg:leading-[64px] tracking-[0%] capitalize text-[#072440]">
+                English Language Courses
+            </h1>
+
+            <!-- Breadcrumb -->
+            <nav class="mt-4 flex space-x-2 text-[16px] leading-[24px]">
+                <a href="#"
+                    class="font-poppins font-normal text-[#707070] hover:text-[#072440] transition-colors">Home</a>
+                <span class="text-[#707070]">›</span>
+                <span class="font-poppins font-normal text-[#292D32]">English Language Courses</span>
+            </nav>
+
+        </div>
+    </section>
+
+    <section class="px-4">
+        <div class="py-20 md:py-30 lg:px-20">
+            <div class="container mx-auto px-0 md:px-4">
+
+                <!-- Section Heading -->
+                <div class="text-center md:text-left mb-10 md:mb-15">
+                    <h2
+                        class="font-poppins font-bold text-[28px] leading-[36px] sm:text-[36px] sm:leading-[44px] md:text-[40px] md:leading-[50px] text-[#072440]">
+                        Strengthening Global Communication Skills
+                    </h2>
+                    <p
+                        class="font-poppins font-normal text-[20px] md:text-[20px] lg:text-[24px] leading-[160%] tracking-[0%] mb-4">
+                        Immersion programmes delivered at UK universities for Saudi students seeking to strengthen
+                        their English proficiency before beginning their academic journey.</p>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="font-poppins font-semibold capitalize 
+                        text-[26px] leading-[34px] 
+                        sm:text-[28px] sm:leading-[38px] 
+                        lg:text-[32px] lg:leading-[40px] 
+                        text-[#072440]">
+                        Program Types
+                    </h3>
+                </div>
+
+                <!-- Content -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+
+                    <div
+                        class="w-full flex-1 bg-[url('assets/img/frame-icon1.png')] bg-cover md:bg-contain bg-no-repeat bg-[length:100%_100%] rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] rounded-2xl px-6 pt-18 md:pt-25 pb-5 md:pb-10">
+                        <h3
+                            class="font-poppins font-semibold text-[18px] md:text-[20px] lg:text-[24px] text-[#072440] mb-3">
+                            Proven market leadership</h3>
+                        <p class="text-[#292D32] text-[15px] md:text-[16px] leading-[26px] md:leading-[28px]">
+                            17+ years of successful operations with multi-location offices
+                        </p>
+                    </div>
+
+                    <div
+                        class="w-full flex-1 bg-[url('assets/img/frame-icon2.png')] bg-cover md:bg-contain bg-no-repeat bg-[length:100%_100%] rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] rounded-2xl px-6 pt-18 md:pt-25 pb-5 md:pb-10">
+                        <h3
+                            class="font-poppins font-semibold text-[18px] md:text-[20px] lg:text-[24px] text-[#072440] mb-3">
+                            Global academic network</h3>
+                        <p class="text-[#292D32] text-[15px] md:text-[16px] leading-[26px] md:leading-[28px]">
+                            Strategic partnerships with 250+ leading universities and executive education providers
+                        </p>
+                    </div>
+
+
+                    <div
+                        class="w-full flex-1 bg-[url('assets/img/frame-icon3.png')] bg-cover md:bg-contain bg-no-repeat bg-[length:100%_100%] rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] rounded-2xl px-6 pt-18 md:pt-25 pb-5 md:pb-10">
+                        <h3
+                            class="font-poppins font-semibold text-[18px] md:text-[20px] lg:text-[24px] text-[#072440] mb-3">
+                            Operational excellence</h3>
+                        <p class="text-[#292D32] text-[15px] md:text-[16px] leading-[26px] md:leading-[28px]">
+                            ISO 9001:2015 certified operations with British Council licensing
+                        </p>
+                    </div>
+                    <div
+                        class="w-full flex-1 bg-[url('assets/img/frame-icon4.png')] bg-cover md:bg-contain bg-no-repeat bg-[length:100%_100%] rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] rounded-2xl px-6 pt-18 md:pt-25 pb-5 md:pb-10">
+                        <h3
+                            class="font-poppins font-semibold text-[18px] md:text-[20px] lg:text-[24px] text-[#072440] mb-3">
+                            Strategic market presence</h3>
+                        <p class="text-[#292D32] text-[15px] md:text-[16px] leading-[26px] md:leading-[28px]">
+                            Riyadh (Head Office), Jeddah, and Al-Khobar locations
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="px-4">
+        <div class="bg-[#E8F5FF] py-16 md:py-20 px-6 md:px-12 lg:px-20 rounded-3xl">
+            <div class="container mx-auto px-0 md:px-4">
+                <h2
+                    class="text-center font-poppins font-bold text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] text-[#072440] mb-12">
+                    Delivery options
+                </h2>
+
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <!-- Left Content -->
+                    <div class="md:w-1/2 space-y-6">
+
+                        <!-- Item -->
+                        <div class="bg-white rounded-xl shadow-sm p-5 flex items-start gap-4">
+                            <span class="w-2 h-2 mt-2 bg-[#072440] rounded-full shrink-0"></span>
+                            <div>
+                                <h3
+                                    class="font-poppins font-medium text-[20px] sm:text-[22px] md:text-[24px] leading-[34px] text-[#072440]">
+                                    University-based programs
+                                </h3>
+                                <p
+                                    class="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] text-[#292D32]">
+                                    Authentic campus experience at leading UK institutions
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="bg-white rounded-xl shadow-sm p-5 flex items-start gap-4">
+                            <span class="w-2 h-2 mt-2 bg-[#072440] rounded-full shrink-0"></span>
+                            <div>
+                                <h3
+                                    class="font-poppins font-medium text-[20px] sm:text-[22px] md:text-[24px] leading-[34px] text-[#072440]">
+                                    Flexible duration
+                                </h3>
+                                <p
+                                    class="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] text-[#292D32]">
+                                    6 weeks to full academic year programs
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="bg-white rounded-xl shadow-sm p-5 flex items-start gap-4">
+                            <span class="w-2 h-2 mt-2 bg-[#072440] rounded-full shrink-0"></span>
+                            <div>
+                                <h3
+                                    class="font-poppins font-medium text-[20px] sm:text-[22px] md:text-[24px] leading-[34px] text-[#072440]">
+                                    Cultural immersion
+                                </h3>
+                                <p
+                                    class="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] text-[#292D32]">
+                                    Integration with British academic and social environments
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="bg-white rounded-xl shadow-sm p-5 flex items-start gap-4">
+                            <span class="w-2 h-2 mt-2 bg-[#072440] rounded-full shrink-0"></span>
+                            <div>
+                                <h3
+                                    class="font-poppins font-medium text-[20px] sm:text-[22px] md:text-[24px] leading-[34px] text-[#072440]">
+                                    Pathway integration
+                                </h3>
+                                <p
+                                    class="font-poppins font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] text-[#292D32]">
+                                    Direct progression routes to degree programs
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="md:w-1/2">
+                        <img src="assets/img/delivery.jpg" alt="Delivery Options"
+                            class="rounded-2xl w-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-4 py-16">
+        <div class="container mx-auto px-0 md:px-4">
+            <!-- Heading -->
+            <h2
+                class="font-poppins font-semibold text-[28px] sm:text-[30px] md:text-[32px] leading-[40px] text-[#072440] mb-10">
+                Key Features
+            </h2>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <!-- Left Column -->
+                <div class="flex flex-col gap-6">
+                    <!-- Feature Item -->
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <div
+                            class="w-10 h-10 flex items-center justify-center bg-[#072440] text-white font-poppins font-medium text-[20px] md:text-[24px] rounded-lg mb-6">
+                            1
+                        </div>
+                        <p class="font-poppins font-medium text-[20px] md:text-[24px] leading-[34px] text-[#292D32]">
+                            TESOL-qualified native English speakers
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <div
+                            class="w-10 h-10 flex items-center justify-center bg-[#072440] text-white font-poppins font-medium text-[20px] md:text-[24px] rounded-lg mb-6">
+                            2
+                        </div>
+                        <p class="font-poppins font-medium text-[20px] md:text-[24px] leading-[34px] text-[#292D32]">
+                            British Council accredited centers
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <div
+                            class="w-10 h-10 flex items-center justify-center bg-[#072440] text-white font-poppins font-medium text-[20px] md:text-[24px] rounded-lg mb-6">
+                            3
+                        </div>
+                        <p class="font-poppins font-medium text-[20px] md:text-[24px] leading-[34px] text-[#292D32]">
+                            Small class sizes for personalized attention
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="flex flex-col gap-6">
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <div
+                            class="w-10 h-10 flex items-center justify-center bg-[#072440] text-white font-poppins font-medium text-[20px] md:text-[24px] rounded-lg mb-6">
+                            4
+                        </div>
+                        <p class="font-poppins font-medium text-[20px] md:text-[24px] leading-[34px] text-[#292D32]">
+                            Regular progress assessments &amp; reporting
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <div
+                            class="w-10 h-10 flex items-center justify-center bg-[#072440] text-white font-poppins font-medium text-[20px] md:text-[24px] rounded-lg mb-6">
+                            5
+                        </div>
+                        <p class="font-poppins font-medium text-[20px] md:text-[24px] leading-[34px] text-[#292D32]">
+                            Visa guidance and support throughout
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-sec px-4 py-20">
+        <div class="container mx-auto px-0 md:px-4">
+            <div class="flex flex-col lg:flex-row gap-6 lg:gap-6 items-start">
+                <!-- Contact Form -->
+                <div class="w-full lg:w-[58.33%]">
+                    <div
+                        class="contact-form bg-[#E8F5FF] shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] p-6 md:p-12 lg:p-15 rounded-3xl">
+                        <h2
+                            class="font-poppins font-bold text-[36px] md:text-[48px] lg:text-[54px] leading-[44px] md:leading-[56px] lg:leading-[64px] text-[#072440] mb-4">
+                            Contact Us</h2>
+                        <p
+                            class="font-poppins font-normal text-[20px] md:text-[20px] lg:text-[24px] leading-[24px] text-[#292D32] mb-8">
+                            Get in touch with us
+                            today — we're here to help.</p>
+
+                        <form class="space-y-6">
+                            <!-- Name Fields -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-[14px] font-medium text-[#292D32] mb-2">Last Name *</label>
+                                    <input type="text" placeholder="Enter your last name"
+                                        class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-[14px] font-medium text-[#292D32] mb-2">First Name
+                                        *</label>
+                                    <input type="text" placeholder="Enter your first name"
+                                        class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent">
+                                </div>
+                            </div>
+
+                            <!-- Contact Fields -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-[14px] font-medium text-[#292D32] mb-2">Email *</label>
+                                    <input type="email" placeholder="Enter your email"
+                                        class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-[14px] font-medium text-[#292D32] mb-2">Phone number
+                                        *</label>
+                                    <input type="tel" placeholder="e.g. 50 123 4567"
+                                        class="w-full bg-white px-4 py-3 rounded-lg focus:ring-[#072440] focus:border-transparent">
+                                </div>
+                            </div>
+
+                            <!-- Dropdown Fields -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-[14px] font-medium text-[#292D32] mb-2">Education level
+                                        *</label>
+                                    <select
+                                        class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent appearance-none bg-white">
+                                        <option>Select option</option>
+                                        <option>High School</option>
+                                        <option>Bachelor's Degree</option>
+                                        <option>Master's Degree</option>
+                                        <option>PhD</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-[14px] font-medium text-[#292D32] mb-2">Do you live in
+                                        Saudi Arabia *</label>
+                                    <select
+                                        class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent appearance-none bg-white">
+                                        <option>Select option</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Nationality Field -->
+                            <div>
+                                <label class="block text-[14px] font-medium text-[#292D32] mb-2">What is your
+                                    nationality *</label>
+                                <select
+                                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent appearance-none bg-white">
+                                    <option>Select option</option>
+                                    <option>Saudi Arabia</option>
+                                    <option>United Arab Emirates</option>
+                                    <option>Kuwait</option>
+                                    <option>Qatar</option>
+                                    <option>Bahrain</option>
+                                    <option>Oman</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-left">
+                                <button type="submit"
+                                    class="bg-[#072440] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#103a75] transition-colors duration-150">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="w-full lg:w-[41.33%]">
+                    <!-- Image and Quote -->
+                    <div class="contact-image-quote">
+                        <div
+                            class="text-center mb-6 bg-[#E8F5FF] shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] p-6 md:p-10 pb-0 md:pb-0 rounded-3xl relative overflow-hidden">
+                            <img src="assets/img/contact-img.png" alt="Student with books"
+                                class="w-full max-w-md mx-auto relative z-10 h-[350px] object-contain">
+                            <img src="assets/img/map.png" alt="map"
+                                class="absolute right-0 top-0 w-1/2 max-w-[360px] opacity-60 hidden md:block" />
+                        </div>
+
+                        <!-- Quote Card -->
+                        <div class="bg-[#F1F1F1] rounded-3xl px-6 md:px-8 py-10 md:py-15">
+                            <div class="bg-white rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] p-6 md:p-8">
+                                <div class="text-center flex gap-2">
+                                    <div class="font-poppins leading-none"><img class="w-[100px]"
+                                            src="assets/img/quote.svg" alt="Quote Icon">
+                                    </div>
+                                    <p
+                                        class="font-poppins font-medium text-[18px] md:text-[20px] lg:text-[24px] text-[#072440]">
+                                        Achieve your dream and make a place for yourself among science students.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#072440] text-white py-12 md:py-16">
+        <div class="container mx-auto px-4 md:px-6">
+
+            <!-- Newsletter Section -->
+            <div
+                class="flex flex-col md:flex-row items-center justify-between mb-8 md:mb-12 pb-6 md:pb-8 border-b border-gray-600 gap-4">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="assets/img/footer-logo.svg" alt="UKuni Logo">
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col md:flex-row pace-x-4 w-full md:w-auto justify-between md:justify-end gap-2 items-center">
+                    <span class="font-poppins font-medium text-[16px] md:text-[20px] lg:text-[24px]">Follow our
+                        newsletter</span>
+                    <div class="flex border border-gray-600 p-1 rounded-lg w-full md:w-auto">
+                        <input type="email" placeholder="Enter Your Email"
+                            class="px-3 md:px-4 py-2 text-[14px] md:text-[16px] text-white placeholder-gray-400 rounded-l-lg focus:outline-none w-full md:w-64 bg-transparent">
+                        <button
+                            class="bg-white text-[14px] md:text-[16px] lg:text-[18px] font-medium text-[#072440] px-4 md:px-6 py-2 rounded-lg transition-colors cursor-pointer w-[200px]">
+                            Get in touch
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Footer Links -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
+
+                <!-- About Column -->
+                <div>
+                    <h3 class="font-poppins font-bold text-[16px] md:text-lg mb-4">About</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Our Services</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Student University
+                                Enrolments</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Executive Learning &
+                                Development</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">English Language
+                                Courses</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Student Summer
+                                Programmes and
+                                Camps</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Higher Education and
+                                Corporate
+                                Advisory Services</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Student Journey</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Our Partners Column -->
+                <div>
+                    <h3 class="font-poppins font-bold text-[16px] md:text-lg mb-4">Our Partners</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">News</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Insights &
+                                Expertise</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQs</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Member Area Column -->
+                <div class="flex flex-col gap-8">
+                    <div class="">
+                        <h3 class="font-poppins font-bold text-[16px] md:text-lg mb-4">Member Area</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Log in</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Sign Up</a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h3 class="font-poppins font-bold text-[16px] md:text-lg mb-4">Stay in Touch</h3>
+                        <p class="text-gray-300 mb-4 leading-relaxed text-[14px] md:text-[16px]">
+                            We'd love to talk about how we can help you. Send us a message below and we'll respond as
+                            soon as
+                            possible.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span class="text-gray-300">info@ukuni.org</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span class="text-gray-300">+966 50 887 2735</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-600">
+                <div class="text-gray-300 mb-4 md:mb-0">
+                    © UKuni 2025. All rights Reserved
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!-- Alpine.js CDN -->
+<script src="https://unpkg.com/alpinejs" defer></script>
+
+<!-- GSAP Core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<!-- ScrollToPlugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+<!-- ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+    (function () {
+        function updateHeaderOffset() {
+            var header = document.querySelector('header.header');
+            var section = document.querySelector('section.hero');
+            if (!header || !section) return;
+            var height = header.offsetHeight || 0;
+            section.style.paddingTop = height + 'px';
+        }
+
+        // Update on load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updateHeaderOffset);
+        } else {
+            updateHeaderOffset();
+        }
+
+        // Update on resize (debounced)
+        var resizeTimeout;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(updateHeaderOffset, 100);
+        });
+
+        // Update when header size changes
+        var headerEl = document.querySelector('header.header');
+        if (window.ResizeObserver && headerEl) {
+            var ro = new ResizeObserver(updateHeaderOffset);
+            ro.observe(headerEl);
+        }
+
+        // Update after fonts load (affects header height)
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(updateHeaderOffset);
+        }
+
+        // Mobile sidebar toggle logic
+        var btn = document.getElementById('mobileMenuButton');
+        var btnClose = document.getElementById('mobileMenuClose');
+        var sidebar = document.getElementById('siteNav');
+        var overlay = document.getElementById('mobileOverlay');
+
+        function openMenu() {
+            if (!sidebar || !overlay || !btn) return;
+            sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('pointer-events-none');
+            requestAnimationFrame(function () {
+                overlay.classList.add('opacity-100');
+                overlay.classList.remove('opacity-0');
+            });
+            document.body.classList.add('overflow-hidden');
+            sidebar.setAttribute('aria-hidden', 'false');
+            btn.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMenu() {
+            if (!sidebar || !overlay || !btn) return;
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('opacity-0');
+            overlay.classList.remove('opacity-100');
+            setTimeout(function () {
+                overlay.classList.add('pointer-events-none');
+            }, 200);
+            document.body.classList.remove('overflow-hidden');
+            sidebar.setAttribute('aria-hidden', 'true');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+
+        function toggleMenu() {
+            if (!sidebar) return;
+            if (sidebar.classList.contains('-translate-x-full')) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        }
+
+        if (btn) btn.addEventListener('click', toggleMenu);
+        if (btnClose) btnClose.addEventListener('click', closeMenu);
+        if (overlay) overlay.addEventListener('click', closeMenu);
+
+        // Close on ESC
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeMenu();
+        });
+
+        // Reset on resize up to desktop
+        var resizeTO;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTO);
+            resizeTO = setTimeout(function () {
+                if (window.innerWidth >= 768) {
+                    closeMenu();
+                }
+                updateHeaderOffset();
+            }, 150);
+        });
+
+        // Header active on scroll
+        var lastKnownScrollY = 0;
+        var ticking = false;
+        var headerActiveThreshold = 10; // px
+        var headerNode = document.querySelector('header.header');
+
+        function onScroll() {
+            lastKnownScrollY = window.scrollY || window.pageYOffset || 0;
+            if (!ticking) {
+                window.requestAnimationFrame(updateHeaderState);
+                ticking = true;
+            }
+        }
+
+        function updateHeaderState() {
+            if (!headerNode) return;
+            if (lastKnownScrollY > headerActiveThreshold) {
+                headerNode.classList.add('active');
+            } else {
+                headerNode.classList.remove('active');
+            }
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        // Initialize state in case page loads scrolled
+        updateHeaderState();
+    })();
+</script>
+<script>
+    (function () {
+        var $track = $('#destinationsTrack');
+        if (!$track.length || !$.fn.slick) return;
+
+        $track.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            appendDots: $('#destDots'),
+            arrows: false,
+            prevArrow: $('#destPrev'),
+            nextArrow: $('#destNext'),
+            responsive: [
+                { breakpoint: 1280, settings: { slidesToShow: 2 } },
+                { breakpoint: 1024, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1, arrows: false, centerMode: false } },
+                { breakpoint: 640, settings: { slidesToShow: 1, arrows: false, dots: true } }
+            ]
+        });
+    })();
+</script>
+<script>
+    (function () {
+        var $testimonialsSlider = $('#testimonialsSlider');
+        if (!$testimonialsSlider.length || !$.fn.slick) return;
+
+        $testimonialsSlider.slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            appendDots: $('#testimonialsDots'),
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            responsive: [
+                { breakpoint: 1280, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true, arrows: false } },
+                { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true, arrows: false } }
+            ]
+        });
+    })();
+</script>
+<script>
+    (function () {
+        var $blogSlider = $('#blogSlider');
+        if (!$blogSlider.length || !$.fn.slick) return;
+
+        $blogSlider.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            appendDots: $('#blogDots'),
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            responsive: [
+                { breakpoint: 1280, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } },
+                { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } }
+            ]
+        });
+    })();
+
+    (function () {
+        var $storiesSlider = $('#storiesSlider');
+        if (!$storiesSlider.length || !$.fn.slick) return;
+
+        $storiesSlider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            appendDots: $('#storiesDots'),
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            responsive: [
+                { breakpoint: 1280, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+                { breakpoint: 1024, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+                { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } },
+                { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } }
+            ]
+        });
+    })();
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var initScrollTriggers = function initScrollTriggers() {
+            var stepsWrappers = document.querySelectorAll(".step-b-row");
+
+            if (window.innerWidth < 1200) return;
+
+            stepsWrappers.forEach(function (wrapper) {
+                var header = document.querySelector(".header");
+                var stepsContainer = wrapper.querySelector(".steps-list");
+                var stepRows = wrapper.querySelectorAll(".step-row");
+
+                if (!stepsContainer || stepRows.length < 4 || !header) return;
+
+                var getHeaderHeight = function getHeaderHeight() {
+                    return header.offsetHeight;
+                };
+
+                var updateTriggers = function updateTriggers() {
+                    var headerHeight = getHeaderHeight();
+
+                    stepRows.forEach(function (step, index) {
+                        var numberDesktop = step.querySelector(".number-desktop");
+                        if (numberDesktop) {
+                            numberDesktop.textContent = (index + 1).toString().padStart(2, "0");
+                        }
+
+                        if (index === stepRows.length - 1) return;
+
+                        var endValue = void 0;
+                        if (index === stepRows.length - 2) {
+                            var stepMarginBottom =
+                                parseFloat(getComputedStyle(step).marginBottom) || 0;
+                            endValue = "bottom+=" + stepMarginBottom + " top+=" + headerHeight;
+                        } else {
+                            var lastStep = stepRows[stepRows.length - 1];
+                            var prevStep = stepRows[stepRows.length - 2];
+                            var prevStepMarginBottom =
+                                parseFloat(getComputedStyle(prevStep).marginBottom) || 0;
+                            var stepsWrapperPaddingBottom =
+                                parseFloat(getComputedStyle(wrapper).paddingBottom) || 0;
+                            endValue =
+                                "top+=" +
+                                (lastStep.offsetTop -
+                                    headerHeight -
+                                    lastStep.offsetHeight -
+                                    prevStepMarginBottom -
+                                    stepsWrapperPaddingBottom) +
+                                " top+=" +
+                                headerHeight;
+                        }
+
+                        ScrollTrigger.create({
+                            trigger: step,
+                            start: "top top+=" + headerHeight,
+                            end: endValue,
+                            pin: true,
+                            pinSpacing: false,
+                            // markers: true,
+                            onEnter: function onEnter() {
+                                if (index > 0) {
+                                    gsap.to(stepRows[index - 1], { opacity: 0, duration: 0.3 });
+                                }
+                            },
+                            onLeaveBack: function onLeaveBack() {
+                                if (index > 0) {
+                                    gsap.to(stepRows[index - 1], { opacity: 1, duration: 0.3 });
+                                }
+                            },
+                        });
+                    });
+
+                    ScrollTrigger.refresh();
+                };
+
+                updateTriggers();
+            });
+        };
+
+        var isActive = false;
+
+        var checkAndInit = function checkAndInit() {
+            if (window.innerWidth >= 1200 && !isActive) {
+                isActive = true;
+                initScrollTriggers();
+            } else if (window.innerWidth < 1200 && isActive) {
+                isActive = false;
+                ScrollTrigger.getAll().forEach(function (trigger) {
+                    return trigger.kill();
+                });
+            }
+        };
+
+        checkAndInit();
+
+        window.addEventListener("resize", function () {
+            checkAndInit();
+        });
+    });
+
+    // Accordion toggle
+    document.querySelectorAll(".faq-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector(".icon");
+
+            // Close all open FAQs
+            document.querySelectorAll(".faq-content").forEach((item) => {
+                if (item !== content) {
+                    item.classList.add("hidden");
+                    item.previousElementSibling.querySelector(".icon").textContent = "+";
+                }
+            });
+
+            // Toggle current
+            content.classList.toggle("hidden");
+            icon.textContent = content.classList.contains("hidden") ? "+" : "−";
+        });
+    });
+</script>
