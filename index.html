@@ -27,130 +27,159 @@
 </head>
 
 <body>
-  <header class="header fixed inset-x-0 top-0 z-50 pt-3">
+    <header
+    class="header fixed inset-x-0 top-0 z-50 w-[95%] mt-3 md:w-[98%] m-auto rounded-3xl">
     <div class="container mx-auto flex items-center justify-between py-4 px-6">
-      <!-- Logo -->
-      <a href="#" class="flex items-center space-x-2">
-        <img src="assets/img/logo.svg" alt="Logo" class="h-10" />
-      </a>
-
-      <!-- Mobile menu button -->
-      <button id="mobileMenuButton"
-        class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none "
-        aria-controls="siteNav" aria-expanded="false" aria-label="Open menu">
-        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      <!-- Unified Nav: mobile drawer + desktop inline -->
-      <nav id="siteNav"
-        class="fixed top-0 left-0 h-full w-[84%] sm:w-80 max-w-[90%] overflow-y-auto bg-white shadow-2xl rounded-r-2xl -translate-x-full transition-transform duration-300 ease-out md:static md:h-auto md:w-auto md:max-w-none md:bg-transparent md:shadow-none md:rounded-none md:translate-x-0 md:flex md:items-center md:overflow-visible"
-        aria-hidden="true">
-        <!-- Mobile-only header inside drawer -->
-        <div class="md:hidden py-4 px-4 flex items-center justify-between border-b">
-          <span class="font-semibold text-gray-900">Menu</span>
-          <button id="mobileMenuClose"
-            class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none "
-            aria-label="Close menu">
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-        <!-- Links group -->
-        <div
-          class="px-4 py-4 space-y-4 md:p-0 md:space-y-0 md:flex md:flex-1 md:justify-center md:items-center md:space-x-8">
-          <a href="#"
-            class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">About</a>
-
-          <!-- Dropdown: Our Services -->
-          <div class="relative group">
-            <button
-              class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87] flex items-center">
-              Our Services
-              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div
-              class="absolute left-0 top-full hidden md:group-hover:block md:group-focus:block bg-white shadow-lg rounded-lg w-56 z-50 py-2 pointer-events-auto">
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 1</a>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 2</a>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 3</a>
-            </div>
-            <div class="md:hidden mt-2 space-y-1 pl-2">
-              <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Service 1</a>
-              <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Service 2</a>
-              <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Service 3</a>
-            </div>
-          </div>
-
-          <a href="#"
-            class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">Our
-            Partners</a>
-
-          <!-- Dropdown: Resources -->
-          <div class="relative group">
-            <button
-              class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87] flex items-center">
-              Resources
-              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div
-              class="absolute left-0 top-full hidden md:group-hover:block md:group-focus:block bg-white shadow-lg rounded-lg w-56 z-50 py-2 pointer-events-auto">
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Resource 1</a>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Resource 2</a>
-            </div>
-            <div class="md:hidden mt-2 space-y-1 pl-2">
-              <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Resource 1</a>
-              <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Resource 2</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Divider on mobile -->
-        <div class="md:hidden border-t my-2 px-4">
-
-          <!-- Right group: language + CTA -->
-          <div class="pb-6 md:p-0 md:pb-0 md:ml-auto md:flex md:items-center md:space-x-4">
-            <div class="py-3 md:py-0">
-              <a href="#"
-                class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">En</a>
-              <span class="mx-1">|</span>
-              <a href="#"
-                class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">Ar</a>
-            </div>
-            <a href="#"
-              class="font-poppins font-semibold text-[18px] leading-[26px] text-center bg-[#FFFFFF99] border border-[#FFFFFF1A] px-5 py-2 rounded-lg shadow-sm hover:bg-gray-100">Contact
-              Us</a>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Right Section -->
-      <div class="items-center space-x-4 hidden md:flex">
-        <!-- Language Switch -->
-        <div class="hidden md:block">
-          <a href="#"
-            class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">En</a>
-          <span class="mx-1">|</span>
-          <a href="#"
-            class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">Ar</a>
-        </div>
-
-        <!-- CTA Button -->
-        <a href="#"
-          class="font-poppins font-semibold text-[18px] leading-[26px] text-center bg-[#FFFFFF99] border border-[#FFFFFF1A] px-5 py-2 rounded-lg shadow-sm hover:bg-gray-100">
-          Contact Us
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-2">
+            <img src="assets/img/logo.svg" alt="Logo" class="h-10" />
         </a>
-      </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobileMenuButton"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none "
+            aria-controls="siteNav" aria-expanded="false" aria-label="Open menu">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Unified Nav: mobile drawer + desktop inline -->
+        <nav id="siteNav"
+            class="fixed top-0 left-0 h-full w-[100%] max-w-[100%] overflow-y-auto bg-white -translate-x-full transition-transform duration-300 ease-out
+        md:static md:h-auto md:w-auto md:max-w-none md:bg-transparent md:shadow-none md:rounded-none md:translate-x-0 md:flex md:items-center md:overflow-visible md:top-auto md:left-auto"
+            aria-hidden="true">
+
+            <!-- Mobile header -->
+            <div
+                class="md:hidden py-4 px-4 flex items-center justify-between rounded-3xl shadow-[0_4px_15px_0_#292D3212] w-[95%] mx-auto mt-2 mb-5">
+                <img src="assets/img/logo.svg" alt="Logo" class="h-10" />
+                <button id="mobileMenuClose"
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
+                    aria-label="Close menu">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Scrollable nav body -->
+            <div class="flex flex-col md:flex-row md:h-auto md:items-center md:justify-between">
+
+                <div
+                    class="flex-1 px-4 py-4 space-y-4 md:p-0 md:space-y-0 md:flex md:flex-1 md:justify-center md:items-center md:space-x-8 overflow-y-auto md:overflow-visible">
+
+                    <!-- About -->
+                    <a href="#" class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]
+              block pb-[10px] border-b border-[oklch(92.8%_0.006_264.531)] md:inline-block md:pb-0 md:border-none">
+                        About
+                    </a>
+
+                    <!-- Our Services -->
+                    <div class="relative group">
+                        <button class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]
+                flex items-center justify-between w-full
+                pb-[10px] border-b border-[oklch(92.8%_0.006_264.531)]
+                md:inline-flex md:w-auto md:pb-0 md:border-none" onclick="toggleDropdown('servicesDropdown')">
+                            Our Services
+                            <svg class="ml-1 w-4 h-4 transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Desktop dropdown -->
+                        <div
+                            class="absolute left-0 top-full hidden md:group-hover:block bg-white shadow-lg rounded-lg w-56 z-50 py-2 pointer-events-auto">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 1</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 2</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Service 3</a>
+                        </div>
+
+                        <!-- Mobile dropdown -->
+                        <div id="servicesDropdown" class="hidden md:hidden mt-2 space-y-1 pl-2">
+                            <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Service 1</a>
+                            <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Service 2</a>
+                            <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Service 3</a>
+                        </div>
+                    </div>
+
+                    <!-- Our Partners -->
+                    <a href="#" class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]
+              block pb-[10px] border-b border-[oklch(92.8%_0.006_264.531)] md:inline-block md:pb-0 md:border-none">
+                        Our Partners
+                    </a>
+
+                    <!-- Resources -->
+                    <div class="relative group">
+                        <button class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]
+                flex items-center justify-between w-full
+                pb-[10px] border-b border-[oklch(92.8%_0.006_264.531)]
+                md:inline-flex md:w-auto md:pb-0 md:border-none" onclick="toggleDropdown('resourcesDropdown')">
+                            Resources
+                            <svg class="ml-1 w-4 h-4 transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Desktop dropdown -->
+                        <div
+                            class="absolute left-0 top-full hidden md:group-hover:block bg-white shadow-lg rounded-lg w-56 z-50 py-2 pointer-events-auto">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Resource 1</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Resource 2</a>
+                        </div>
+
+                        <!-- Mobile dropdown -->
+                        <div id="resourcesDropdown" class="hidden md:hidden mt-2 space-y-1 pl-2">
+                            <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Resource 1</a>
+                            <a href="#" class="block px-2 py-1 hover:bg-gray-100 rounded">Resource 2</a>
+                        </div>
+                    </div>
+                    <!-- Language -->
+                    <div class="px-4 md:px-0 md:ml-auto md:hidden">
+                        <a href="#"
+                            class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">En</a>
+                        <span class="mx-1">|</span>
+                        <a href="#"
+                            class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">Ar</a>
+                    </div>
+                </div>
+
+                <!-- Fixed bottom CTA -->
+                <div class="md:hidden px-4 py-4 bg-white fixed bottom-0 left-0 w-[100%] max-w-[100%] rounded-r-2xl">
+                    <a href="#"
+                        class="block w-full font-poppins font-semibold text-[18px] leading-[26px] text-center bg-[#072440] text-white px-5 py-3 rounded-lg shadow-sm hover:bg-[#1f2f70]">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Right Section -->
+        <div class="items-center space-x-4 hidden md:flex">
+            <!-- Language Switch -->
+            <div class="hidden md:block">
+                <a href="#"
+                    class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">En</a>
+                <span class="mx-1">|</span>
+                <a href="#"
+                    class="text-[18px] font-medium leading-[26px] tracking-normal text-[#072440] hover:text-[#293B87]">Ar</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#"
+                class="font-poppins font-semibold text-[18px] leading-[26px] text-center bg-[#FFFFFF99] border border-[#FFFFFF1A] px-5 py-2 rounded-lg shadow-sm hover:bg-gray-100">
+                Contact Us
+            </a>
+        </div>
     </div>
-  </header>
+</header>
   <!-- Overlay -->
   <div id="mobileOverlay"
     class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-200"></div>
@@ -1006,134 +1035,133 @@
   <!-- Contact Section -->
   <section class="contact-sec px-4 py-20">
     <div class="container mx-auto px-0 md:px-4">
-        <div class="flex flex-col lg:flex-row gap-6 lg:gap-6 items-start">
-            <!-- Contact Form -->
-            <div class="w-full lg:w-[58.33%]">
-                <div
-                    class="contact-form bg-[#E8F5FF] shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] p-6 md:p-12 lg:p-15 rounded-3xl">
-                    <h2
-                        class="font-poppins font-bold text-[36px] md:text-[48px] lg:text-[54px] leading-[44px] md:leading-[56px] lg:leading-[64px] text-[#072440] mb-4">
-                        Contact Us</h2>
-                    <p
-                        class="font-poppins font-normal text-[20px] md:text-[20px] lg:text-[24px] leading-[24px] text-[#292D32] mb-8">
-                        Get in touch with us
-                        today — we're here to help.</p>
+      <div class="flex flex-col lg:flex-row gap-6 lg:gap-6 items-start">
+        <!-- Contact Form -->
+        <div class="w-full lg:w-[58.33%]">
+          <div
+            class="contact-form bg-[#E8F5FF] shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] p-6 md:p-12 lg:p-15 rounded-3xl">
+            <h2
+              class="font-poppins font-bold text-[36px] md:text-[48px] lg:text-[54px] leading-[44px] md:leading-[56px] lg:leading-[64px] text-[#072440] mb-4">
+              Contact Us</h2>
+            <p
+              class="font-poppins font-normal text-[20px] md:text-[20px] lg:text-[24px] leading-[34px] text-[#292D32] mb-8">
+              Get in touch with us
+              today — we're here to help.</p>
 
-                    <form class="space-y-6">
-                        <!-- Name Fields -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-[14px] font-medium text-[#292D32] mb-2">Last Name *</label>
-                                <input type="text" placeholder="Enter your last name"
-                                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent">
-                            </div>
-                            <div>
-                                <label class="block text-[14px] font-medium text-[#292D32] mb-2">First Name
-                                    *</label>
-                                <input type="text" placeholder="Enter your first name"
-                                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent">
-                            </div>
-                        </div>
-
-                        <!-- Contact Fields -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-[14px] font-medium text-[#292D32] mb-2">Email *</label>
-                                <input type="email" placeholder="Enter your email"
-                                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent">
-                            </div>
-                            <div>
-                                <label class="block text-[14px] font-medium text-[#292D32] mb-2">Phone number
-                                    *</label>
-                                <input type="tel" placeholder="e.g. 50 123 4567"
-                                    class="w-full bg-white px-4 py-3 rounded-lg focus:ring-[#072440] focus:border-transparent">
-                            </div>
-                        </div>
-
-                        <!-- Dropdown Fields -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-[14px] font-medium text-[#292D32] mb-2">Education level
-                                    *</label>
-                                <select
-                                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent appearance-none bg-white">
-                                    <option>Select option</option>
-                                    <option>High School</option>
-                                    <option>Bachelor's Degree</option>
-                                    <option>Master's Degree</option>
-                                    <option>PhD</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-[14px] font-medium text-[#292D32] mb-2">Do you live in
-                                    Saudi Arabia *</label>
-                                <select
-                                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent appearance-none bg-white">
-                                    <option>Select option</option>
-                                    <option>Yes</option>
-                                    <option>No</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Nationality Field -->
-                        <div>
-                            <label class="block text-[14px] font-medium text-[#292D32] mb-2">What is your
-                                nationality *</label>
-                            <select
-                                class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent appearance-none bg-white">
-                                <option>Select option</option>
-                                <option>Saudi Arabia</option>
-                                <option>United Arab Emirates</option>
-                                <option>Kuwait</option>
-                                <option>Qatar</option>
-                                <option>Bahrain</option>
-                                <option>Oman</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <div class="text-left">
-                            <button type="submit"
-                                class="bg-[#072440] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#103a75] transition-colors duration-150">
-                                Submit
-                            </button>
-                        </div>
-                    </form>
+            <form class="space-y-6">
+              <!-- Name Fields -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[14px] font-medium text-[#292D32] mb-2">Last Name *</label>
+                  <input type="text" placeholder="Enter your last name"
+                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent">
                 </div>
-            </div>
-            <div class="w-full lg:w-[41.33%]">
-                <!-- Image and Quote -->
-                <div class="contact-image-quote">
-                    <div
-                        class="text-center mb-6 bg-[#E8F5FF] shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] p-6 md:p-10 pb-0 md:pb-0 rounded-3xl relative overflow-hidden">
-                        <img src="assets/img/contact-img.png" alt="Student with books"
-                            class="w-full max-w-md mx-auto relative z-10 h-[350px] object-contain">
-                        <img src="assets/img/map.png" alt="map"
-                            class="absolute right-0 top-0 w-1/2 max-w-[360px] opacity-60 hidden md:block" />
-                    </div>
-
-                    <!-- Quote Card -->
-                    <div class="bg-[#F1F1F1] rounded-3xl px-6 md:px-8 py-10 md:py-15">
-                        <div class="bg-white rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] p-6 md:p-8">
-                            <div class="text-center flex gap-2">
-                                <div class="font-poppins leading-none"><img class="w-[100px]" src="assets/img/quote.svg"
-                                        alt="Quote Icon">
-                                </div>
-                                <p
-                                    class="font-poppins font-medium text-[18px] md:text-[20px] lg:text-[24px] text-[#072440]">
-                                    Achieve your dream and make a place for yourself among science students.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                  <label class="block text-[14px] font-medium text-[#292D32] mb-2">First Name
+                    *</label>
+                  <input type="text" placeholder="Enter your first name"
+                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent">
                 </div>
-            </div>
+              </div>
 
+              <!-- Contact Fields -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[14px] font-medium text-[#292D32] mb-2">Email *</label>
+                  <input type="email" placeholder="Enter your email"
+                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent">
+                </div>
+                <div>
+                  <label class="block text-[14px] font-medium text-[#292D32] mb-2">Phone number
+                    *</label>
+                  <input type="tel" placeholder="e.g. 50 123 4567"
+                    class="w-full bg-white px-4 py-3 rounded-lg focus:ring-[#072440] focus:border-transparent">
+                </div>
+              </div>
+
+              <!-- Dropdown Fields -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[14px] font-medium text-[#292D32] mb-2">Education level
+                    *</label>
+                  <select
+                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent appearance-none bg-white">
+                    <option>Select option</option>
+                    <option>High School</option>
+                    <option>Bachelor's Degree</option>
+                    <option>Master's Degree</option>
+                    <option>PhD</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-[14px] font-medium text-[#292D32] mb-2">Do you live in
+                    Saudi Arabia *</label>
+                  <select
+                    class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent appearance-none bg-white">
+                    <option>Select option</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Nationality Field -->
+              <div>
+                <label class="block text-[14px] font-medium text-[#292D32] mb-2">What is your
+                  nationality *</label>
+                <select
+                  class="w-full bg-white px-4 py-3 rounded-lg focus:outline-none focus:border-transparent appearance-none bg-white">
+                  <option>Select option</option>
+                  <option>Saudi Arabia</option>
+                  <option>United Arab Emirates</option>
+                  <option>Kuwait</option>
+                  <option>Qatar</option>
+                  <option>Bahrain</option>
+                  <option>Oman</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-left">
+                <button type="submit"
+                  class="bg-[#072440] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#103a75] transition-colors duration-150">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
+        <div class="w-full lg:w-[41.33%]">
+          <!-- Image and Quote -->
+          <div class="contact-image-quote">
+            <div
+              class="text-center mb-6 bg-[#E8F5FF] shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] p-6 md:p-10 pb-0 md:pb-0 rounded-3xl relative overflow-hidden">
+              <img src="assets/img/contact-img.png" alt="Student with books"
+                class="w-full max-w-md mx-auto relative z-10 h-[350px] object-contain">
+              <img src="assets/img/map.png" alt="map"
+                class="absolute right-0 top-0 w-1/2 max-w-[360px] opacity-60 hidden md:block" />
+            </div>
+
+            <!-- Quote Card -->
+            <div class="bg-[#F1F1F1] rounded-3xl px-6 md:px-8 py-10 md:py-15">
+              <div class="bg-white rounded-2xl shadow-[0_4px_30px_0_rgba(41,45,50,0.06)] p-6 md:p-8">
+                <div class="text-center flex gap-2">
+                  <div class="font-poppins leading-none"><img class="w-[100px]" src="assets/img/quote.svg"
+                      alt="Quote Icon">
+                  </div>
+                  <p class="font-poppins font-medium text-[18px] md:text-[20px] lg:text-[24px] text-[#072440]">
+                    Achieve your dream and make a place for yourself among science students.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-</section>
+  </section>
 
   <!-- Footer Section -->
   <footer class="bg-[#072440] text-white py-12 md:py-16">
